@@ -13,6 +13,7 @@
 })()
 */
 // By doing above thing it will throw an error beacuse the first IIFE has started but it doesn't know that where to stop. we can use ";" to define the stage.
+// By doing that two IIFE can be written in one Page.
 // Now this will work
 (function trial(){
     console.log("Hello There")
