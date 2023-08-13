@@ -17,6 +17,7 @@ if (userEmail) {
 //     console.log("Array is empty");
 // }
 
+// How to chechk if an object is Empty.
 const emptyObj = {}
 
 if (Object.keys(emptyObj).length === 0) {
