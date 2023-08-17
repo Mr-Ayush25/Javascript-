@@ -8,7 +8,7 @@ const user = {
         console.log(`Username: ${this.username}`);
         console.log(this);
     }
-    // This plays very imporatant role it provides you the current context.
+    // "this" plays very imporatant role it provides you the current context.
 
 }
 
