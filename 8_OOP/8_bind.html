@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+</head>
+<body>
+    <button>Button Clicked</button>
+</body>
+<script>
+    class React {
+        constructor(){
+            this.library = "React"
+            this.server = "https://localhost:300"
+
+            //requirement
+            document
+                .querySelector('button')
+
+                // Without bind , when we will call the handleClick here the parent who is calling handleClick is document so "this" keyword is taking document's execution content.Document doesn't has any "server" property.
+                .addEventListener('click', this.handleClick)
+
+                
+                // With bind , when we will call the handleClick here the parent who is calling handleClick is document so "this" keyword is taking document's execution content.Document doesn't has any "server" property.But wer'e telling using "bind" keyword that don't use my context use my parent i.e React's execution using "this" keyword.
+                .addEventListener('click', this.handleClick.bind(this))
+
+        }
+        handleClick(){
+            console.log("button clicked");
+            console.log(this.server);
+        }
+    }
+
+    const app = new React()
+</script>
+</html>
