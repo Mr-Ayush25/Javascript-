@@ -21,6 +21,7 @@ function SetUsername(username){
 function createUser(username, email, password){
     // here "SetUsername" function is called so it will execute and give its property to these function which is "username"
     // Providing SetUsername my address(this),and parameter .
+    // By providing this to setUsername function he is saving that data in my execution context,Environment.
     SetUsername.call(this, username)
     this.email = email
     this.password = password
